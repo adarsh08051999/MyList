@@ -5,13 +5,13 @@ node v16.20.2 (npm v8.19.4)
 use `nvm use 16` to switch to node v16
 
 # Setup
-1) run postgres server and update .env.example file with the credentials and rename it as .env
+1) run postgres server and update .env.example file with the credentials and rename it as `.env`
 2) to get postgres table setup run migrations by running `npm run migrate:run`
 3) build the program by using `npm run build`
 4) run the server by using `npm run dev`
 
 # APIs
-# items has to be passed as `M(id)` and `T(id)` for movie and Tv series with comma separated for API 2 & 3
+-- items has to be passed as `M(id)` and `T(id)` for movie and Tv series with comma separated for API 2 & 3
 
 1) List My Items - GET call -
 
@@ -36,8 +36,5 @@ curl --location 'http://localhost:4000/removeItems' \
     "items": "M23,M24,T1"
 }'
 
-
-
-
-
-
+# Run test cases
+After running the service run `npx jest specs/poc.spec.ts`
